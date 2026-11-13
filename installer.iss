@@ -11,7 +11,7 @@
 #define MyAppName "메모리클리너"
 #define MyAppNameEn "MemoryCleaner"
 #ifndef MyAppVersion
-  #define MyAppVersion "1.1.0"
+  #define MyAppVersion "1.1.1"
 #endif
 #define MyAppPublisher "MrDH1004"
 #define MyAppURL "https://github.com/MrDH1004/DHMemCleaner"

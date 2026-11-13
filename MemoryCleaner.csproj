@@ -10,7 +10,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>img\app_icon.ico</ApplicationIcon>
     <!-- 릴리즈 버전의 단일 진실 원천. build.ps1이 이 값을 읽어 설치 파일·릴리즈 태그(vX.Y.Z)를 만든다. -->
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <Product>DHMemCleaner</Product>
     <Company>MrDH1004</Company>
     <Copyright>MrDH1004</Copyright>

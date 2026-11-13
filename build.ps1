@@ -74,8 +74,11 @@ Write-Host "[build] sha256 $hash"
 
 # ── GitHub 릴리즈 ────────────────────────────────────────────
 if ($Release) {
+    # PS 5.1은 Stop 모드에서 네이티브 명령의 stderr 출력을 예외로 바꾼다.
+    # gh는 정상 진행 메시지도 stderr로 쓰므로 이 구간은 종료 코드로만 판정한다.
+    $ErrorActionPreference = 'Continue'
     $tag = "v$version"
-    gh release view $tag *> $null
+    gh release view $tag 2>$null | Out-Null
     if ($LASTEXITCODE -eq 0) { Fail "릴리즈 $tag 가 이미 있음 — csproj <Version>을 올리세요" }
 
     $notesArgs = @('--generate-notes')
