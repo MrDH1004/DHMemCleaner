@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>MemoryCleaner</RootNamespace>
+    <AssemblyName>MemoryCleaner</AssemblyName>
+    <Nullable>disable</Nullable>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>img\app_icon.ico</ApplicationIcon>
+    <!-- 릴리즈 버전의 단일 진실 원천. build.ps1이 이 값을 읽어 설치 파일·릴리즈 태그(vX.Y.Z)를 만든다. -->
+    <Version>1.1.0</Version>
+    <Product>DHMemCleaner</Product>
+    <Company>MrDH1004</Company>
+    <Copyright>MrDH1004</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tests\**" />
+    <EmbeddedResource Remove="Tests\**" />
+    <None Remove="Tests\**" />
+  </ItemGroup>
+
+</Project>
